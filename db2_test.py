@@ -20,6 +20,7 @@ connection = pyodbc.connect(driver='{iSeries Access ODBC Driver}', system='as400
 
 c1 = connection.cursor()
 
+# 회원정보 출력
 c1.execute('select * from SELPGM3.B2CMBR')
 
 for row in c1:
