@@ -19,7 +19,9 @@ import pyodbc
 connection = pyodbc.connect(driver='{iSeries Access ODBC Driver}', system='as400', uid='cspro', pwd='cspro')
 
 c1 = connection.cursor()
-c1.execute('select * from SELPGM3.B2CMBR')
+
+# 오프라인(임시) 회원 정보 출력
+c1.execute('select * from SELPGM3.B2CMBR_OF')
 
 for row in c1:
 	print(row)
