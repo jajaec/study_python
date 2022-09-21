@@ -20,8 +20,7 @@ connection = pyodbc.connect(driver='{iSeries Access ODBC Driver}', system='as400
 
 c1 = connection.cursor()
 
-# 온오프라인 통합회원 데이터 출력
-# 온오프라인 통합회원 데이터 출력 123
+# 온오프라인 통합회원 데이터
 c1.execute('select * from SELPGM3.B2CMBR')
 
 for row in c1:
